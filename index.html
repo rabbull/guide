@@ -2,9 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"/>
-
-    <title>einen Moment, bitte!</title>
+    <title>跳转中</title>
     <script>
         const xhr = new XMLHttpRequest();
         xhr.onreadystatechange = function () {
@@ -12,7 +10,7 @@
                 const response = JSON.parse(this.responseText);
                 console.log(response)
 
-                if (response.country === 'CN' || response.country === 'CH') {
+                if (response.country === 'CN' || response.country === 'HK') {
                     window.location.replace("guide.pdf");
                 } else {
                     window.location.replace("https://ifjphspdnc9.sg.larksuite.com/wiki/LJwkweC7FiMSg9kCqLelLpASg0c");
