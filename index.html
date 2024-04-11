@@ -12,10 +12,11 @@
                 const response = JSON.parse(this.responseText);
                 console.log(response)
 
-                if (response.country === "CH") {
+                if (response.country === 'CN' || response.country === 'CH') {
                     window.location.replace("guide.pdf");
+                } else {
+                    window.location.replace("https://ifjphspdnc9.sg.larksuite.com/wiki/LJwkweC7FiMSg9kCqLelLpASg0c");
                 }
-                window.location.replace("https://ifjphspdnc9.sg.larksuite.com/wiki/LJwkweC7FiMSg9kCqLelLpASg0c");
             }
         };
         xhr.open('GET', 'https://api.country.is/', true);
